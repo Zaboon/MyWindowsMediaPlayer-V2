@@ -74,7 +74,6 @@ namespace MyWindowsMediaPlayer
             }
         }
 
-/*
         private void ResizeScreen(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.F11 && isFullscreen == true)
@@ -99,46 +98,10 @@ namespace MyWindowsMediaPlayer
             this.Topmost = true;
             isFullscreen = true;
         }
-*/
+
 
         private void changeThemes(object sender, RoutedEventArgs e)
         {
-            /*
-                        Style s;
-                        Style tb;
-                        ControlTemplate buttonT;
-                        ControlTemplate SButtonT;
-                        ControlTemplate LButtonT;
-
-                        s = new Style();
-                        tb = new Style();
-                        buttonT = new ControlTemplate();
-                        SButtonT = new ControlTemplate();
-                        LButtonT = new ControlTemplate();
-                        try
-                        {
-                            s = this.FindResource(ressourceName[themePos]) as Style;
-                            tb = this.FindResource(ressourceTB[themePos]) as Style;
-                            buttonT = this.FindResource(ressourceButton[themePos]) as ControlTemplate;
-                            SButtonT = this.FindResource(ressourceSecondaryButton[themePos]) as ControlTemplate;
-                            LButtonT = this.FindResource(ressourceLastButton[themePos]) as ControlTemplate;
-
-                            mainTb.Style = tb;
-                            bottomStackPanel.Style = s;
-                            PlayButton.Template = buttonT;
-                            StopButton.Template = SButtonT;
-                            PauseButton.Template = SButtonT;
-                            NextSongButton.Template = LButtonT;
-                            PreviousSongButton.Template = LButtonT;
-                            themePos = themePos + 1;
-                            if (themePos == ressourceName.Count)
-                                themePos = 0;
-                        }
-                        catch (Exception err)
-                        {
-                            MessageBox.Show("An error occured: " + err.Message);
-                        }
-            */
             var app = (App)Application.Current;
             try
             {

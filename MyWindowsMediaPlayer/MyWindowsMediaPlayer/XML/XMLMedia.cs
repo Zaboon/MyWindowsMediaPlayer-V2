@@ -12,7 +12,7 @@ namespace MyWindowsMediaPlayer
 {
     public partial class WindowsMediaPlayer : MetroWindow
     {
-        private void saveXML(object sender, RoutedEventArgs e)
+        private void XMLSave(object sender, RoutedEventArgs e)
         {
             if (numberItems > 0)
             {
@@ -33,7 +33,7 @@ namespace MyWindowsMediaPlayer
                             mediaList = new List<File>();
                             foreach (File data in list)
                                 mediaList.Add(data);
-                            if (XMLClass.CreateXml(name, mediaList))
+                            if (XMLClass.XMLCreate(name, mediaList))
                             {
                                 MessageBox.Show("Sucessfully saved your items");
                             }
@@ -71,7 +71,7 @@ namespace MyWindowsMediaPlayer
                             listItems.Items.Clear();
                             list.Clear();
                         }
-                        List<File> mediaList = XMLClass.ReadXml(filename);
+                        List<File> mediaList = XMLClass.XMLRead(filename);
                         if (mediaList.Count > 0)
                         {
                             foreach (File mi in mediaList)

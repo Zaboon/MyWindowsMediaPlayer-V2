@@ -27,7 +27,7 @@ namespace MyWindowsMediaPlayer
         private int numberItems = 0;
         private int PlayListPos = 0;
  //       private int themePos = 1;
- //       private bool isFullscreen = false;
+        private bool isFullscreen = false;
         private int count = 0;
         private List<File> list = new List<File>();
         List<String> ressourceName;
@@ -64,21 +64,6 @@ namespace MyWindowsMediaPlayer
             ressourceSecondaryButton = new List<String>();
             ressourceLastButton = new List<String>();
             ressourceTB = new List<String>();
-
-/*            ressourceLastButton.Add("controlLastButtonTemplate");
-            ressourceLastButton.Add("controlLastButtonTemplateTheme1");
-            ressourceLastButton.Add("controlLastButtonTemplateTheme2");
-            ressourceLastButton.Add("controlLastButtonTemplateTheme3");
-
-            ressourceSecondaryButton.Add("controlButtonSecondaryTemplate");
-            ressourceSecondaryButton.Add("controlButtonSecondaryTemplateTheme1");
-            ressourceSecondaryButton.Add("controlButtonSecondaryTemplateTheme2");
-            ressourceSecondaryButton.Add("controlButtonSecondaryTemplateTheme3");
-
-            ressourceButton.Add("controlButtonTemplate");
-            ressourceButton.Add("controlButtonTemplateTheme1");
-            ressourceButton.Add("controlButtonTemplateTheme2");
-            ressourceButton.Add("controlButtonTemplateTheme3");*/
 
             InitializeComponent();
             DispatcherTimer timer = new DispatcherTimer();

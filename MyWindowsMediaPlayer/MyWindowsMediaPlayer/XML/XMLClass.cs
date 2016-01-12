@@ -10,7 +10,7 @@ namespace MyWindowsMediaPlayer.XML
 {
     class XMLClass
     {
-        public static bool CreateXml(string name, List<File> it)
+        public static bool XMLCreate(string name, List<File> it)
         {
             try
             {
@@ -29,12 +29,12 @@ namespace MyWindowsMediaPlayer.XML
             }
             catch (Exception e)
             {
-                MessageBox.Show("An error occured: " + e.Message);
+                MessageBox.Show("ERROR : " + e.Message);
             }
             return false;
         }
 
-        public static List<File> ReadXml(string name)
+        public static List<File> XMLRead(string name)
         {
             List<File> reader = new List<File>();
             XmlDocument file = new XmlDocument();
@@ -50,16 +50,16 @@ namespace MyWindowsMediaPlayer.XML
                 {
                     uriNode = actualNode.SelectSingleNode("uri");
                     path = uriNode.InnerText;
-                    reader.Add(new File(uriNode.InnerText));
+                    reader.Add(new File(path));
                 }
             }
             catch (XmlException e)
             {
-                MessageBox.Show("An error occured in xml file: " + e.Message);
+                MessageBox.Show("An error in xml file : " + e.Message);
             }
             catch (Exception e)
             {
-                MessageBox.Show("An error occured: " + e.Message);
+                MessageBox.Show("ERROR : " + e.Message);
             }
             return reader;
         }
