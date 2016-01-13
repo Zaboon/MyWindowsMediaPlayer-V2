@@ -30,11 +30,6 @@ namespace MyWindowsMediaPlayer
         private bool isFullscreen = false;
         private int count = 0;
         private List<File> list = new List<File>();
-        List<String> ressourceName;
-        List<String> ressourceButton;
-        List<String> ressourceSecondaryButton;
-        List<String> ressourceLastButton;
-        List<String> ressourceTB;
 
         private bool ValidateMediaItem(string data)
         {
@@ -59,12 +54,6 @@ namespace MyWindowsMediaPlayer
 
         public WindowsMediaPlayer()
         {
-            ressourceName = new List<String>();
-            ressourceButton = new List<String>();
-            ressourceSecondaryButton = new List<String>();
-            ressourceLastButton = new List<String>();
-            ressourceTB = new List<String>();
-
             InitializeComponent();
             DispatcherTimer timer = new DispatcherTimer();
             timer.Interval = TimeSpan.FromSeconds(1);

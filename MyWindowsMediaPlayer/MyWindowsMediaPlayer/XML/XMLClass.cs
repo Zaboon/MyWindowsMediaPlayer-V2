@@ -46,9 +46,9 @@ namespace MyWindowsMediaPlayer.XML
             {
                 file.Load(@name);
                 node = file.SelectNodes("/Media/Item");
-                foreach (XmlNode actualNode in node)
+                foreach (XmlNode currentNode in node)
                 {
-                    uriNode = actualNode.SelectSingleNode("uri");
+                    uriNode = currentNode.SelectSingleNode("uri");
                     path = uriNode.InnerText;
                     reader.Add(new File(path));
                 }
